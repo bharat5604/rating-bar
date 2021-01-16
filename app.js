@@ -11,7 +11,9 @@ responsive.addEventListener('mouseover', colors);
 competency.addEventListener('mouseover', colors)
 trustworthiness.addEventListener('mouseover', colors)
 customer.addEventListener('mouseover', colors)
-
+next.addEventListener('click', function(){
+    console.log(ratings);
+})
 
 let ratings = {}
 
@@ -140,7 +142,7 @@ function checkValue(e){
 
     } else if (e.target.parentElement.id === 'customer') {
         ratings.customer = e.target.dataset.id;
-        console.log(ratings);
+        // console.log(ratings);
 
     }
     if(ratings.responsive !== undefined && ratings.competency !== undefined && ratings.trustworthiness !== undefined && ratings.customer !== undefined){
