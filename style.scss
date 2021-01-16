@@ -1,0 +1,79 @@
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import '_responsive';
+
+body{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Roboto', sans-serif !important;
+}
+h2{
+	text-align: center;
+	display: block;
+	font-size: 22px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+.box{
+	display: flex;
+	margin: 50px auto;
+	justify-content: center;
+	width:90%;
+	@include tab{
+		width: 100%;
+		h3{
+			top: -60px !important;
+		}
+	}
+	.before{
+		width: 0;
+		height: 0;
+		border: 0 solid transparent;
+		border-top-width: 30px;
+		border-bottom-width: 30px;
+		border-right: 30px solid #999;
+	}
+	.after{
+		width: 0;
+		height: 0;
+		border: 0 solid transparent;
+		border-top-width: 30px;
+		border-bottom-width: 30px;
+		border-left: 30px solid #999;
+		
+	}
+	.common{
+		width: 200px;
+		background: #999;
+		height: 60px;
+		border-right: 2px solid #ccc;
+		text-align: center;
+		position: relative;
+		h3{
+			position: absolute;
+			top: -40px;
+			right: 0;
+			left: 0;
+			text-transform: capitalize;
+			font-size: 1rem;
+			color: #111;
+			font-weight: 400;
+		}
+		&:nth-child(6){
+			border-right: none;
+		}
+		
+	}	
+}
+ 
+#next{
+		font-size: 16px;
+		padding: 10px 30px;
+	&:enabled{
+		color: #fff;
+		background:green;
+		border: none;
+	}
+}
+ 
