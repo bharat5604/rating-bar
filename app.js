@@ -38,6 +38,16 @@ function colors(e) {
         after.style.borderLeftColor="#999"
 
     }
+    else if (e.target.id === 'before') {
+        poor.style.background = `#c00`;
+        before.style.borderRightColor=`#c00`;
+        fair.style.background = `#999`;
+        good.style.background = `#999`;
+        excellent.style.background = `#999`;
+        wow.style.background = `#999`;
+        after.style.borderLeftColor="#999"
+
+    }
     else if (e.target.id === 'fair') {
         poor.style.background = `#c00`;
         fair.style.background = `#c00`;
@@ -76,12 +86,22 @@ function colors(e) {
         after.style.borderLeftColor="green"
 
     }
+    else if (e.target.id === 'after') {
+        poor.style.background = `green`;
+        fair.style.background = `green`;
+        good.style.background = `green`;
+        before.style.borderRightColor=`green`;
+        excellent.style.background = `green`;
+        wow.style.background = `green`;
+        after.style.borderLeftColor="green"
+
+    }
 }
 
 
 function boxes() {
     let result = `
-    <div class="before" id="before"></div>
+    <div class="before"  data-id="1" id="before"></div>
     <div class="common poor" data-id="1" id="poor">
     <h3>Extremely Bad</h3>
   </div>
@@ -98,7 +118,7 @@ function boxes() {
   <div class="common" data-id="5" id="wow">
     <h3>Extremely good</h3>
   </div>
-  <div class="after" id="after"></div>
+  <div class="after" data-id="5" id="after"></div>
     `
     responsive.innerHTML = result;
     competency.innerHTML = result;
